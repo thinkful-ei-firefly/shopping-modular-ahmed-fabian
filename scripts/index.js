@@ -16,9 +16,15 @@
 //console.log(store.items);
 //console.log(foo);
 
+
+
 function main() {
   shoppingList.bindEventListeners();
   shoppingList.render();
 }
 
 $(main);
+
+
+// console.log(Item);
+// console.log(foo);
