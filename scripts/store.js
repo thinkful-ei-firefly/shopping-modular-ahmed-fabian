@@ -25,8 +25,9 @@ const store = (function () {
     }
   }
 
-  const findAndToggleChecked = function(id){
-  	return this.findById(id).checked;
+  const findAndToggleChecked = function (id) {
+    const foundItem = this.findById(id);
+   foundItem.checked = !foundItem.checked;
   }
 
   const findAndUpdateName = function(id, newName){
