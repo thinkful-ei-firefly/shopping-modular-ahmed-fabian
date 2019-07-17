@@ -1,7 +1,5 @@
 'use strict';
 
-//const foo = 'bar';
-
 const store = (function () {
   const items = [
     { id: cuid(), name: 'apples', checked: false },
@@ -43,6 +41,14 @@ const store = (function () {
   	this.items.splice(this.items.findIndex(item => item.id===id), 1);
   }
 
+  const toggleCheckedFilter = function(){
+  	this.hideCheckedItems = !this.hideCheckedItems;
+  }
+
+  const setSearchTerm = function(searchTerm){
+  	this.searchTerm = searchTerm;
+  }
+
   return {
   	items,
   	hideCheckedItems,
@@ -51,7 +57,9 @@ const store = (function () {
   	addItem,
   	findAndToggleChecked,
   	findAndUpdateName,
-  	findAndDelete
+  	findAndDelete,
+  	toggleCheckedFilter,
+  	setSearchTerm
   };
 
 }() );

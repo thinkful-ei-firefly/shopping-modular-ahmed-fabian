@@ -1,4 +1,4 @@
-
+'use strict';
 
 const Item = (function() {
 	const validateName = function(name){
