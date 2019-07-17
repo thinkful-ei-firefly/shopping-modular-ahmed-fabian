@@ -61,9 +61,9 @@ const shoppingList = (function(){
       Item.validateName(itemName);
       // Item.create (itemName)
       store.items.push(Item.create(itemName));
-      render();
+      //render();
     } catch (error) {
-      console.log('Cannot add item: {error.message}');
+      console.log(`Cannot add item: ${error.message}`);
     }
     // store.items.push({ id: cuid(), name: itemName, checked: false });
   }
